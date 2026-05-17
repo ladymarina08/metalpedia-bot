@@ -10,12 +10,12 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 load_dotenv()
 
-TOKEN = os.getenv("TELEGRAM_TOKEN")
-LASTFM_API_KEY = os.getenv("LASTFM_API_KEY")
-YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
-AUDIODB_API_KEY = os.getenv("AUDIODB_API_KEY")
-SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
-SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
+TOKEN = os.getenv("TELEGRAM_TOKEN", "").strip()
+LASTFM_API_KEY = os.getenv("LASTFM_API_KEY", "").strip()
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "").strip()
+AUDIODB_API_KEY = os.getenv("AUDIODB_API_KEY", "").strip()
+SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID", "").strip()
+SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET", "").strip()
 
 YOUTUBE_DAILY_LIMIT = 20
 YOUTUBE_QUOTA_FILE = "youtube_quota.json"
